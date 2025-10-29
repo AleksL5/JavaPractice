@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = readInput();
+        String result = "";
+        
+        result = (n < 0) ? "Число негативное" : (n > 0) ? "Число позитивное" : "Число равно 0";
+
+
+        System.out.println(result);
+    }
+
+    public static int readInput() {
+        int n = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.hasNextLine()) {
+            n = Integer.parseInt(scanner.nextLine());
+        }
+        scanner.close();
+
+        return n;
+    }
+}
